@@ -2,21 +2,19 @@
     display:flex ;
     justify-content: space-around;
     padding : 16px;
-    gap: 70px;
+    gap: 100px;
     box-shadow: 0 1px 3px -2px white;
 }
 
 .nav-logo{
     display: flex;
     align-items: center;
-    border-style: solid;
-    border-width: 2px;
-    border-color: aliceblue;
+  
 }
 
 .logo{
-    width: 500px;
-    height: 600px;
+    width: 150px;
+    height: 150px;
     object-fit: scale-down;
 }
 
@@ -25,8 +23,26 @@
     align-items: center;
     list-style: none;
     gap: 60px;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 500px;
+    color: azure;
+}
+
+.nav-menu li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    cursor: pointer;
+}
+
+.nav-menu hr{
+    border: none;
+    width: 80%;
+    height: 3px;
+    border-radius: 10px;
+    background-color: rgb(155, 25, 25);
 }
 
 .nav-cart{
@@ -38,4 +54,19 @@
     width: 50px;
     height: 70px;
     object-fit: scale-down;
+}
+
+.nav-cart-count{
+    width: 22px;
+    height: 22px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -35px;
+    margin-left: -10px;
+    border-radius: 45px;
+    font-size: 14px;
+    border: none;
+    background: red;    
+    color: white;
 }

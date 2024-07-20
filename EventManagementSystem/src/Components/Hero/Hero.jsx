@@ -2,7 +2,8 @@ import react from "react";
 import './Hero.css'
 import hand_icon from '../Assets/hand_icon.png'
 import arrow_icon from '../Assets/arrow_icon.png'
-import hero from '../Assets/hero.jpg'
+
+import hero from '../Assets/hero.png'
 
 function Hero(){
 

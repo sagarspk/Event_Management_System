@@ -32,6 +32,7 @@
 
 .hero-right {
     flex: 1;
+    margin-top: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -53,7 +54,7 @@
     justify-content: center;
     align-items: center;
     gap: 15px;
-    width: 310px;
+    width: 330px;
     height: 70px;
     border-radius: 75px;
     margin-top: 30px;
@@ -61,6 +62,7 @@
     color: white;
     font-size: 22px;
     font-weight: 500;
+    cursor: pointer;
 }
 
 .arrowIcon {
@@ -69,8 +71,8 @@
 }
 
 .heroIcon {
-    height: 900px;
-    width: 900px;
+    height: 850px;
+    width: 850px;
     object-fit: scale-down;
 }
 

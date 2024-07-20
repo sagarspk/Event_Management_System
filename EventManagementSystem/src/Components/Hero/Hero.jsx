@@ -11,7 +11,7 @@ function Hero(){
             <div className="hero">
 
                 <div className="hero-left">
-                    <h2>UPCOMMING EVENTS</h2>
+                    <h2>GRAND EVENTS ONLY</h2>
                     <div>
                         <div className="hero-hand-icon">
                             <p>new</p>

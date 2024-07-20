@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect  } from 'react';
 import './Navbar.css';
 import logo from '../Assets/logo.png';
 import cart from '../Assets/cart.png';
@@ -6,6 +6,22 @@ import { Link } from 'react-router-dom';
 
 function Navbar() {
     const [menu, setMenu] = useState("home");
+    const [scrolled, setScrolled] = useState(false);
+
+    const handleScroll = () => {
+        if (window.scrollY > 50) {
+            setScrolled(true);
+        } else {
+            setScrolled(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll);
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
 
     return (
         <div className='navbar'>

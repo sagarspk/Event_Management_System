@@ -27,6 +27,7 @@
         width: 150px;
         height: 150px;
         object-fit: scale-down;
+        cursor: pointer;
     }
 
     .nav-menu{

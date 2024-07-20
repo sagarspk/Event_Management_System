@@ -1,0 +1,155 @@
+.event-slider {
+    position: relative;
+    overflow: hidden;
+    margin-top: 200px;
+    height: 900px; /* Adjust the height as needed */
+    width: 100%; /* Full width */
+}
+
+.event-slide {
+    background: linear-gradient(180deg, rgb(24, 5, 120) 55%, rgb(23, 22, 22));
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, left 1s ease-in-out;
+}
+
+.event-slide.active {
+    left: 0;
+    opacity: 1;
+    z-index: 1; /* Ensure the active slide is on top */
+}
+
+.event-image {
+    position:relative;
+    left: 500px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.event-info {
+    position: absolute;
+    top: 40px;
+    left: 70px;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 80px;
+    font-weight: 700 ;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.event-descp{
+    position: absolute;
+    top: 300px;
+    left: 70px;
+    color: white;
+    font-size: 30px;
+    font-weight: 700 ;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.event-venue{
+    position: absolute;
+    top: 350px;
+    left: 70px;
+    color: white;
+    font-size: 30px;
+    font-weight: 700 ;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.event-address{
+    position: absolute;
+    top: 400px;
+    left: 70px;
+    color: white;
+    font-size: 30px;
+    font-weight: 700 ;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.event-btn{
+    position: absolute;
+    top: 500px;
+    left: 70px;
+}
+
+.eventButton{
+    background-color: rgb(255, 0, 0);
+    color: white;
+    border: none;
+    padding-left: 30px;
+    padding-right: 30px ;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-radius: 20px ;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.eventButton:hover{
+    padding-left: 40px;
+    padding-right: 40px ;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    box-shadow: 5px 5px 5px rgba(0,0,0, 0.3);
+}
+.eventButton:active{
+    box-shadow: none;
+    top: 10px;
+    opacity: 0.6;
+    margin-bottom: 0;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+@media (max-width: 768px) {
+    .event-info {
+        bottom: 10px;
+        left: 10px;
+        padding: 10px;
+    }
+
+    .event-image {
+        left: 300px;
+        width: 50%;
+        height: 30%;
+        object-fit: contain;
+    }
+    
+    .event-slider {
+        height: 300px; /* Adjust height for smaller screens */
+    }
+
+    .nav-button {
+        font-size: 1.5rem;
+        padding: 8px;
+    }
+}

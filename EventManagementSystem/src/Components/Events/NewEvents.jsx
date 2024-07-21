@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './NewEvents.css';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 import event1 from '../Assets/event1.jpg';
 import event2 from '../Assets/event2.jpg';
 // import event3 from '../Assets/event3.jpg';
@@ -24,7 +25,7 @@ function NewEvents() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % events.length);
-        }, 30000); // Change slide every 10 seconds
+        }, 15000); // Change slide every 15 seconds
 
         return () => clearInterval(interval);
     }, []);
@@ -47,11 +48,11 @@ function NewEvents() {
                     </div>
 
                     <div className='event-venue'>
-                        <p> Venue: {event.venue}</p>
+                        <p><i className='fas fa-building'></i> Venue: {event.venue}</p>
                     </div>
 
                     <div className='event-address'>
-                        <p>Address: {event.address}</p>
+                        <p><i className='fas fa-map-marker-alt'></i> Address: {event.address}</p>
                     </div>
 
                     <div className='event-btn'>

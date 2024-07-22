@@ -1,6 +1,7 @@
 import react from 'react';
 import NewEvents from '../Components/Events/NewEvents';
 import InduvidualEvent from "../Components/Events/InduvidualEvents"
+import Footer from '../Components/Footer/Footer';
 
 function Events(){
 
@@ -9,6 +10,8 @@ function Events(){
             <NewEvents />
 
             <InduvidualEvent />
+
+            <Footer />
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import React, { useState, useEffect  } from 'react';
 import './Footer.css';
 import logo from '../Assets/logo.png'
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 function Footer(){
 
@@ -22,6 +23,26 @@ function Footer(){
 
                 <div className='store-socialMedia'>
                     <h2>Follow Us</h2>
+                    <ul className='footer-social'>
+                        <li>
+                            <a href='https://www.facebook.com/9seven7shop'>
+                                <i className="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        
+
+                        <li>
+                            <a href=''> 
+                                <i className="fa-brands fa-instagram"></i>
+                            </a>
+                        </li>
+                        
+                        <li>
+                            <a href='https://www.tiktok.com/@977events'>
+                                 <i className="fa-brands fa-tiktok"> </i>
+                            </a>
+                        </li>
+                    </ul>
 
                 </div>
         </div>

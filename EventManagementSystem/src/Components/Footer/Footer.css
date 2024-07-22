@@ -3,6 +3,7 @@
     grid-template-columns: 800px 1fr 1fr 1fr;
     column-gap: 20px;
     margin-top: 20px;
+    bottom: 0px;
     padding: 20px;
     background-image: url(../Assets/footer.png);
     background-position: center;
@@ -31,7 +32,7 @@
 .store-address h2,
 .store-number h2,
 .store-socialMedia h2 {
-    font-size: 30px;
+    font-size: 32px;
     font-weight: bolder;
 }
 
@@ -40,6 +41,25 @@
 .store-socialMedia p {
     font-size: 20px;
     font-weight: normal;
+    padding-top: 15px;
+}
+
+.footer-social{
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.footer-social li{
+    display: inline;
+    gap: 20px;
+    margin-right: 40px;
+}
+
+.footer-social i{
+   font-size: 32px;
+   padding-top: 15px;
 }
 
 @media (max-width: 1200px) {

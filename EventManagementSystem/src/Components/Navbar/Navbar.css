@@ -10,9 +10,9 @@
         box-shadow: 0 1px 3px -2px white;
         transition: background-color 0.3s, color 0.3s; /* Smooth transition */
         position: fixed;
-        width: 98%;
+        width: 99%;
         top: 0px;
-        left: 10px;
+        left: 0px;
         z-index: 1000;
     }
 
@@ -92,6 +92,7 @@
         width: 50px;
         height: 70px;
         object-fit: scale-down;
+        margin-right: 6px;
     }
 
     .nav-cart-count{
@@ -101,7 +102,7 @@
         justify-content: center;
         align-items: center;
         margin-top: -35px;
-        margin-left: -45px;
+        margin-left: -50px;
         border-radius: 45px;
         font-size: 14px;
         border: none;

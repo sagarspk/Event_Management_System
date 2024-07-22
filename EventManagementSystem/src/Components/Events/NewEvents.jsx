@@ -25,7 +25,7 @@ function NewEvents() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % events.length);
-        }, 15000); // Change slide every 15 seconds
+        }, 20000); // Change slide every 20 seconds
 
         return () => clearInterval(interval);
     }, []);

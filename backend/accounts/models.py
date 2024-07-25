@@ -23,7 +23,6 @@ class UserModel(AbstractBaseUser):
     last_name = models.CharField(max_length=20)
     contact = models.CharField(max_length=10,null=True)
     address = models.CharField(max_length=100,null=True)
-    profile_image = CloudinaryField('profile_image', blank=True, null=True)
     is_active = models.BooleanField(default=True)
     is_superuser = models.BooleanField(default=False)
 

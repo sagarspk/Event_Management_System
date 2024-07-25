@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
     'payment.apps.PaymentConfig',
     'event.apps.EventConfig',
+    'order.apps.OrderConfig'
 ]
 
 MIDDLEWARE = [
@@ -93,10 +94,10 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'quickpark',
-        'USER': 'parker',
-        'PASSWORD': 'parker',
-        'HOST': 'db',
+        'NAME': 'eventmanagement',
+        'USER': 'event',
+        'PASSWORD': 'event',
+        'HOST': 'localhost',
         'PORT': '5432',
     }
 }
@@ -117,9 +118,11 @@ REST_FRAMEWORK = {
         'rest_framework.authentication.SessionAuthentication',
         'rest_framework_simplejwt.authentication.JWTStatelessUserAuthentication',
     ],
-
 }
 
+
+#User Authentication Model
+AUTH_USER_MODEL = "accounts.UserModel"
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -138,6 +141,11 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# Base url to serve media files
+MEDIA_URL = '/media/'
+# Path where media is stored
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 
 
 # Internationalization

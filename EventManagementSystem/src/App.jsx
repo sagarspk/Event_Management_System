@@ -6,12 +6,13 @@ import Events from './Pages/Events';
 import Store from './Pages/Store';
 import Product from './Pages/Product';
 import Cart from './Pages/Cart';
+import Footer from './Components/Footer/Footer';
 
 function App() {
     return (
       <div>
         <BrowserRouter>
-          <Navbar />
+            <Navbar />
           <Routes>
             <Route path='/' element={<Home />} />
             <Route path='/events' element={<Events />} />
@@ -19,6 +20,7 @@ function App() {
             <Route path="/product/:productId" element={<Product />} />
             <Route path='/cart' element={<Cart />} />
           </Routes>
+          <Footer/>
         </BrowserRouter>
       </div>  
     );

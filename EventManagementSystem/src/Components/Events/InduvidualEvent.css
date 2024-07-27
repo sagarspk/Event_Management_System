@@ -5,8 +5,8 @@
     margin-top: 20px;
     padding: 20px;
     background-image: url(../Assets/backgroundImage.jpg);
-        background-position: center;
-        background-size: cover; /* Ensure the background image covers the entire area */
+    background-position: center;
+    background-size: cover; /* Ensure the background image covers the entire area */
 }
 
 .event-card{

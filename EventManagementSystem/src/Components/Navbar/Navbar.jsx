@@ -25,8 +25,10 @@ function Navbar() {
 
     return (
         <div className='navbar'>
-            <div className='nav-logo'>
-                <img className='logo' src={logo} alt='logo' />
+            <div className='nav-logo' onClick={()=>{setMenu("home")}}>
+                <Link to='/'>
+                    <img className='logo' src={logo} alt='logo' />
+                </Link>
             </div>
 
             <ul className='nav-menu'>
@@ -49,7 +51,32 @@ function Navbar() {
                 <Link to='/cart'><img className='cart' src={cart} alt='cart' /></Link>
                 <div className="nav-cart-count">0</div>
             </div>
+
+            <div className="dropdown">
+                <button className='dropbtn'>
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div className="dropdown-content">
+                    <Link to="/" className="link">
+                        <p>Home</p>
+                    </Link>
+                    <Link to="/events" className="link">
+                        <p>Events</p>
+                    </Link>
+                    <Link to="/store" className="link">
+                        <p>Store</p>
+                    </Link>
+                    <Link to="/cart" className="link">
+                        <img className='cart' src={cart} alt='cart' />
+                    </Link>
+
+                </div>
+            </div>
+
         </div>
+
+     
+        
     );
 }
 

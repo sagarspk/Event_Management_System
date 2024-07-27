@@ -11,7 +11,6 @@ function Events(){
 
             <InduvidualEvent />
 
-            <Footer />
         </div>
     )
 }

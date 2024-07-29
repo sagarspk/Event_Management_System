@@ -1,15 +1,8 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './NewEvents.css';
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import event1 from '../Assets/event1.jpg';
-import event2 from '../Assets/event2.jpg';
-// import event3 from '../Assets/event3.jpg';
-
-const events = [
-    { id: 1, title: "New Year Eve", description:"This New year, We bring to you the mmost iconiccc evvent in London.", venue:"Tiger Tiger London", address:"29 Haymarket, London, SW1Y 4SP", image: event1 },
-    { id: 2, title: "Comedy Show", description:"comedy.", venue:"Tiger Tiger London", address:"29 Haymarket, London, SW1Y 4SP", image: event2 },
-    // { id: 3, title: "Event 3", image: event3 },
-];
+import { events } from '../utils/EventsDatabase';
 
 function NewEvents() {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -31,38 +24,41 @@ function NewEvents() {
     }, []);
 
     return (
-        <div className='event-slider'>
-            {events.map((event, index) => (
-                <div
-                    key={event.id}
-                    className={`event-slide ${index === currentIndex ? 'active' : ''}`}
-                >
-                    <img src={event.image} alt={event.title} className='event-image' />
+            <div className='event-slider'>
+                {events.map((event, index) => (
+                    <div
+                        key={event.id}
+                        className={`event-slide ${index === currentIndex ? 'active' : ''}`}
+                    >
+                        <img src={event.image} alt={event.title} className='event-image' />
 
-                    <div className='event-info'>
-                        <h2>{event.title}</h2>
-                    </div>
+                        <div className='event-info'>
+                            <h2>{event.title}</h2>
+                        </div>
 
-                    <div className='event-descp'>
-                        <p>{event.description}</p>
-                    </div>
+                        <div className='event-descp'>
+                            <p>{event.description}</p>
+                        </div>
 
-                    <div className='event-venue'>
-                        <p><i className='fas fa-building'></i> Venue: {event.venue}</p>
-                    </div>
+                        <div className='event-venue'>
+                            <p><i className='fas fa-building'></i> Venue: {event.venue}</p>
+                        </div>
 
-                    <div className='event-address'>
-                        <p><i className='fas fa-map-marker-alt'></i> Address: {event.address}</p>
-                    </div>
+                        <div className='event-address'>
+                            <p><i className='fas fa-map-marker-alt'></i> Address: {event.address}</p>
+                        </div>
 
-                    <div className='event-btn'>
-                        <button className='eventButton'> BOOK NOW</button>
+                        <Link to={`/product/${event.id}`} >        
+                            <div className='event-btn'>
+                                <button className='eventButton'> BOOK NOW</button>
+                            </div>
+                        </Link>
                     </div>
-                </div>
-            ))}
-            <button className='nav-button prev' onClick={handlePrev}>❮</button>
-            <button className='nav-button next' onClick={handleNext}>❯</button>
-        </div>
+                ))}
+                <button className='nav-button prev' onClick={handlePrev}>❮</button>
+                <button className='nav-button next' onClick={handleNext}>❯</button>
+            </div>
+      
     );
 }
 

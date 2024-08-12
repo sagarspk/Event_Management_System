@@ -1,5 +1,6 @@
 import { useParams, useResolvedPath } from "react-router-dom";
 import { events } from "../utils/EventsDatabase";
+import { Link } from "react-router-dom";
 import './EventDetails.css'
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
@@ -12,7 +13,7 @@ function EventDetails(){
         return eventDetail.id === numId;
     }) 
     
-    console.log(filteredEvent)
+    //console.log(filteredEvent)
 
     return(
         <div className="EventDetail">
@@ -25,7 +26,9 @@ function EventDetails(){
             <div className="EventDetailsContent">
                 <h3><i className='fas fa-building'></i> Event : {filteredEvent.title} </h3>
                 <h3><i className='fas fa-map-marker-alt'></i> Location : {filteredEvent.address}</h3>
-                <button className="button-49">Buy Tickets</button>
+                <Link >
+                    <button className="button-49">Buy Tickets</button>
+                </Link>
             </div>
 
         </div>

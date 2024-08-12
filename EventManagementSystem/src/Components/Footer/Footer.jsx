@@ -1,16 +1,20 @@
     import React, { useState, useEffect  } from 'react';
     import './Footer.css';
-    import logo from '../Assets/logo.png'
+    import footer_logo from '../Assets/footer_logo.png'
     import '@fortawesome/fontawesome-free/css/all.min.css';
 
     function Footer(){
+
+        const [menu, setMenu] = useState("home");
 
         return(
 
             <div className='footer-div'>
                 <div className='footer-grid'>
-                    <div className='store-logo'>
-                        <img src= {logo}/>
+                    <div className='store-logo' onClick={()=>{setMenu("home")}}>
+                        
+                            <img src= {footer_logo}/>
+                        
                     </div>
 
                     <div className='store-address'>

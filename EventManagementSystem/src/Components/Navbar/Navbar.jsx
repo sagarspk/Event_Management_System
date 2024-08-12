@@ -47,7 +47,9 @@ function Navbar() {
             </ul>
 
             <div className='nav-cart'>
-                <button className='ticket-btn'>BUY TICKETS NOW</button>
+                <Link to ='/events'>
+                    <button className='ticket-btn'>BUY TICKETS NOW</button>
+                </Link>
                 <Link to='/cart'><img className='cart' src={cart} alt='cart' /></Link>
                 <div className="nav-cart-count">0</div>
             </div>

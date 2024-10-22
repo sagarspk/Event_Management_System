@@ -1,0 +1,210 @@
+    .hero {
+
+        height: 95vh;
+        background: linear-gradient(180deg, rgb(24, 5, 120) 55%, rgb(23, 22, 22));
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin-top: 1%;
+        padding: 20px;
+    }
+
+    .hero-left {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 20px;
+        padding-left: 180px;
+        line-height: 1.1;
+    }
+
+    .hero-left h2 {
+        color: white;
+        font-size: 26px;
+        font-weight: 600;
+    }
+
+    .hero-left p {
+        color: white;
+        font-size: 100px;
+        font-weight: 700;
+    }
+
+    .hero-right {
+        flex: 1;
+        margin-top: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero-hand-icon {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .handIcon {
+        height: 120px;
+        width: 120px;
+        
+    }
+
+    .hero-latest-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        width: 330px;
+        height: 70px;
+        border-radius: 75px;
+        margin-top: 30px;
+        background: red;
+        color: white;
+        font-size: 22px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .arrowIcon {
+        height: 50px;
+        width: 50px;
+    }
+
+    .heroIcon {
+        height: 650px;
+        width: 100%;
+        object-fit: scale-down;
+    }
+
+    /* Media queries for responsiveness */
+    @media (max-width: 1200px) {
+        .hero-left p {
+            font-size: 80px;
+        }
+
+        .handIcon {
+            height: 100px;
+            width: 100px;
+        }
+
+        .heroIcon {
+            height: 700px;
+            width: 700px;
+        }
+    }
+
+    @media (max-width: 992px) {
+        .hero-left p {
+            font-size: 60px;
+        }
+
+        .handIcon {
+            height: 80px;
+            width: 80px;
+        }
+
+        .heroIcon {
+            height: 500px;
+            width: 500px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hero {
+            flex-direction: column;
+        }
+
+        .hero-left {
+            padding-left: 20px;
+            padding-right: 20px;
+            text-align: center;
+        }
+
+        .hero-left p {
+            font-size: 50px;
+        }
+
+        .handIcon {
+            height: 60px;
+            width: 60px;
+        }
+
+        .hero-latest-btn {
+            width: 250px;
+            height: 60px;
+            font-size: 18px;
+        }
+
+        .arrowIcon {
+            height: 40px;
+            width: 40px;
+        }
+
+        .heroIcon {
+            height: 400px;
+            width: 400px;
+        }
+    }
+
+    @media (max-width: 576px) {
+
+        .hero{
+            display: flex;
+            background: linear-gradient(180deg, rgb(24, 5, 120) 55%, rgb(23, 22, 22));
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 37%;
+            width:100%;
+            height: 400px;
+            padding: 20px;
+        }
+
+        .hero-left p {
+            font-size: 40px;
+        }
+
+        .handIcon {
+            height: 50px;
+            width: 50px;
+        }
+
+        .hero-latest-btn {
+            width: 200px;
+            height: 50px;
+            font-size: 16px;
+        }
+
+        .arrowIcon {
+            height: 30px;
+            width: 30px;
+        }
+
+        .heroIcon {
+            height: 300px;
+            width: 300px;
+        }
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    @media (max-width : 450px) {
+        .hero{
+            display: flex;
+            background: linear-gradient(180deg, rgb(24, 5, 120) 55%, rgb(23, 22, 22));
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1%;
+            width:100%;
+            height: 400px;
+            padding: 20px;
+        }
+    }

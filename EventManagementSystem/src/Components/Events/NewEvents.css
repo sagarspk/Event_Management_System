@@ -1,0 +1,208 @@
+.event-slider {
+    position: relative;
+    overflow: hidden;
+    margin-top: 1%;
+    height: 900px; /* Adjust the height as needed */
+    width: 100%; /* Full width */
+}
+
+.event-slide {
+    background: linear-gradient(180deg, rgb(24, 5, 120) 55%, rgb(23, 22, 22));
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out, left 1s ease-in-out;
+}
+
+.event-slide.active {
+    left: 0;
+    opacity: 1;
+    z-index: 1; /* Ensure the active slide is on top */
+}
+
+.event-image {
+    position: absolute;
+    left: 500px;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.event-info,
+.event-descp,
+.event-venue,
+.event-address,
+.event-btn {
+    position: absolute;
+    left: 70px;
+    color: white;
+    font-weight: 700;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.event-info {
+    top: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    font-size: 2rem;
+}
+
+.event-descp {
+    top: 300px;
+    font-size: 1.5rem;
+}
+
+.event-venue {
+    top: 350px;
+    font-size: 1.5rem;
+}
+
+.event-address {
+    top: 400px;
+    font-size: 1.5rem;
+}
+
+.event-btn {
+    top: 500px;
+}
+
+.eventButton {
+    background-color: rgb(255, 0, 0);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.eventButton:hover {
+    padding: 15px 25px;
+    box-shadow: 5px 5px 5px rgba(0,0,0, 0.3);
+}
+
+.eventButton:active {
+    box-shadow: none;
+    top: 10px;
+    opacity: 0.6;
+    margin-bottom: 0;
+}
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+@media (max-width: 1200px) {
+    .event-info {
+        font-size: 1.75rem;
+    }
+
+    .event-image {
+        left: 450px;
+        width: 80%;
+        height: 80%;
+        object-fit: contain;
+    }
+
+    .event-descp, .event-venue, .event-address {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .event-info {
+        font-size: 1.5rem;
+    }
+
+    .event-image {
+        left: 400px;
+        width: 60%;
+        height: 60%;
+        object-fit: contain;
+    }
+
+    .event-descp, .event-venue, .event-address {
+        font-size: 1rem;
+    }
+
+    .event-btn {
+        top: 450px;
+    }
+}
+
+@media (max-width: 768px) {
+    .event-slider {
+        margin-top: 100px;
+        height: auto; /* Adjust height for smaller screens */
+    }
+
+    .event-slide {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .event-info, .event-descp, .event-venue, .event-address, .event-btn {
+        position: static;
+        padding: 10px;
+        font-size: 1rem;
+    }
+
+    .event-info {
+        margin-bottom: 10px;
+    }
+
+    .event-descp, .event-venue, .event-address {
+        font-size: 0.875rem;
+    }
+
+    .event-btn {
+        text-align: center;
+    }
+
+    .eventButton {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .event-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .nav-button {
+        font-size: 1.5rem;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 576px) {
+    .event-info, .event-descp, .event-venue, .event-address {
+        font-size: 0.75rem;
+    }
+
+    .eventButton {
+        font-size: 0.875rem;
+        padding: 8px;
+    }
+}

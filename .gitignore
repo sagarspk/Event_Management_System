@@ -1,0 +1,6 @@
+/envs
+*.log
+*.pot
+*.pyc
+/*/__pycache__
+/compose.yaml
